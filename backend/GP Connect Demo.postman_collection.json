@@ -1,0 +1,689 @@
+{
+	"info": {
+		"_postman_id": "6495f055-230d-4e92-919f-7c930b6ae1a4",
+		"name": "GP Connect Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patient Record - HTML - Summary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3JlY29yZCI6eyJyZXNvdXJjZVR5cGUiOiJQYXRpZW50IiwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cDovL2ZoaXIubmhzLm5ldC9JZC9uaHMtbnVtYmVyIiwidmFsdWUiOiI2NjU2MzM2NTY2In1dfSwicmVxdWVzdGVkX3Njb3BlIjoicGF0aWVudC8qLnJlYWQiLCJyZXF1ZXN0aW5nX2RldmljZSI6eyJyZXNvdXJjZVR5cGUiOiJEZXZpY2UiLCJpZCI6IjEiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cDovL2ZoaXIubmhzLm5ldC9TdHJ1Y3R1cmVEZWZpbml0aW9uL2dwY29ubmVjdC1kZXZpY2UtMSJdLCJ2ZXJzaW9uSWQiOiIxIn0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6IlRQUCIsInZhbHVlIjoiVFBQIn1dLCJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI0NjIyNDAwMDAiLCJkaXNwbGF5IjoiUGF0aWVudCBoZWFsdGggcmVjb3JkIGluZm9ybWF0aW9uIHN5c3RlbSAocGh5c2ljYWwgb2JqZWN0KSJ9XX19LCJyZXF1ZXN0aW5nX29yZ2FuaXphdGlvbiI6eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6ImE3ZDAwMDAwMDAwMDAwMDAiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cDovL2ZoaXIubmhzLm5ldC9TdHJ1Y3R1cmVEZWZpbml0aW9uL2dwY29ubmVjdC1vcmdhbml6YXRpb24tMSJdfSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cDovL2ZoaXIubmhzLm5ldC9JZC9vZHMtb3JnYW5pemF0aW9uLWNvZGUiLCJ2YWx1ZSI6IkE4NDAxOCJ9XSwibmFtZSI6IkNvcmJyaWRnZSBIZWFsdGggQ2VudHJlIn0sInJlcXVlc3RpbmdfcHJhY3RpdGlvbmVyIjp7InJlc291cmNlVHlwZSI6IlByYWN0aXRpb25lciIsImlkIjoiMTcyODEwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwOi8vZmhpci5uaHMubmV0L1N0cnVjdHVyZURlZmluaXRpb24vZ3Bjb25uZWN0LXByYWN0aXRpb25lci0xIl19LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwOi8vZmhpci5uaHMubmV0L0lkL3Nkcy11c2VyLWlkIiwidmFsdWUiOiIxNDIxNDIxNDIxNDIifSx7InN5c3RlbSI6Imh0dHA6Ly9maGlyLm5ocy5uZXQvc2RzLXVzZXItaWQiLCJ2YWx1ZSI6IjE0MjE0MjE0MjE0MiJ9XSwibmFtZSI6eyJwcmVmaXgiOlsiTXIiXSwiZ2l2ZW4iOlsiQm9iIl0sImZhbWlseSI6WyJXaWxzb24iXX0sInByYWN0aXRpb25lclJvbGUiOlt7InJvbGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vZmhpci5uaHMubmV0L1ZhbHVlU2V0L3Nkcy1qb2Itcm9sZS1uYW1lLTEiLCJjb2RlIjoiUzAwMTA6RzAwMzA6UjAyNDAiLCJkaXNwbGF5IjoiJ090aGVyJyBDb21tdW5pdHkgSGVhbHRoIFNlcnZpY2UifV19fV19fQ.",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "localhost",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-From",
+						"value": "A84018",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-InteractionID",
+						"value": "urn:nhs:names:services:gpconnect:fhir:operation:gpc.getcarerecord",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-To",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-TraceID",
+						"value": "EE48E4B0-E419-11E8-884B-5F95BA9F6662",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json+fhir",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"resourceType\":\"Parameters\",\r\n\t\"meta\":\r\n\t{\r\n\t\t\"profile\":\r\n\t\t[\r\n\t\t\t\"http://fhir.nhs.net/OperationDefinition/gpconnect-carerecord-operation-1\"\r\n\t\t]\r\n\t},\r\n\t\"parameter\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"name\":\"patientNHSNumber\",\r\n\t\t\t\"valueIdentifier\":\r\n\t\t\t{\r\n\t\t\t\t\"system\":\"http://fhir.nhs.net/Id/nhs-number\",\r\n\t\t\t\t\"value\":\"6656336566\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\":\"recordSection\",\r\n\t\t\t\"valueCodeableConcept\":\r\n\t\t\t{\r\n\t\t\t\t\"coding\":\r\n\t\t\t\t[\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\":\"http://fhir.nhs.net/ValueSet/gpconnect-record-section-1\",\r\n\t\t\t\t\t\t\"code\":\"SUM\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/DSTU2/1/Patient/$gpc.getcarerecord",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"DSTU2",
+						"1",
+						"Patient",
+						"$gpc.getcarerecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patient Record - HTML - Encounters",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "22befeaf-f43c-462c-b1f8-3ed6876e4ab7",
+						"exec": [
+							"",
+							"var rawStr = `{\"iss\":\"https://www.tpp-uk.com\",\"sub\":\"1728100000000000\",\"aud\":\"https://authorize.fhir.nhs.net/token\",\"exp\":1900000300,\"iat\":1900000000,\"reason_for_request\":\"directcare\",\"requested_record\":{\"resourceType\":\"Patient\",\"identifier\":[{\"system\":\"http://fhir.nhs.net/Id/nhs-number\",\"value\":\"` + `6656336566` + `\"}]},\"requested_scope\":\"patient/*.read\",\"requesting_device\":{\"resourceType\":\"Device\",\"id\":\"1\",\"meta\":{\"profile\":[\"http://fhir.nhs.net/StructureDefinition/gpconnect-device-1\"],\"versionId\":\"1\"},\"identifier\":[{\"system\":\"TPP\",\"value\":\"TPP\"}],\"type\":{\"coding\":[{\"system\":\"http://snomed.info/sct\",\"code\":\"462240000\",\"display\":\"Patient health record information system (physical object)\"}]}},\"requesting_organization\":{\"resourceType\":\"Organization\",\"id\":\"a7d0000000000000\",\"meta\":{\"profile\":[\"http://fhir.nhs.net/StructureDefinition/gpconnect-organization-1\"]},\"identifier\":[{\"system\":\"http://fhir.nhs.net/Id/ods-organization-code\",\"value\":\"A84018\"}],\"name\":\"Corbridge Health Centre\"},\"requesting_practitioner\":{\"resourceType\":\"Practitioner\",\"id\":\"1728100000000000\",\"meta\":{\"profile\":[\"http://fhir.nhs.net/StructureDefinition/gpconnect-practitioner-1\"]},\"identifier\":[{\"system\":\"http://fhir.nhs.net/Id/sds-user-id\",\"value\":\"142142142142\"},{\"system\":\"http://fhir.nhs.net/sds-user-id\",\"value\":\"142142142142\"}],\"name\":{\"prefix\":[\"Mr\"],\"given\":[\"Bob\"],\"family\":[\"Wilson\"]},\"practitionerRole\":[{\"role\":{\"coding\":[{\"system\":\"http://fhir.nhs.net/ValueSet/sds-job-role-name-1\",\"code\":\"S0010:G0030:R0240\",\"display\":\"'Other' Community Health Service\"}]}}]}}`;",
+							"var wordArray = CryptoJS.enc.Utf8.parse(rawStr);",
+							"var base64 = `eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.` + CryptoJS.enc.Base64.stringify(wordArray) + `.`;",
+							"pm.environment.set(\"HtmlJwt\", base64);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{HtmlJwt}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "localhost",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-From",
+						"value": "A84018",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-InteractionID",
+						"value": "urn:nhs:names:services:gpconnect:fhir:operation:gpc.getcarerecord",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-To",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "Ssp-TraceID",
+						"value": "EE48E4B0-E419-11E8-884B-5F95BA9F6662",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json+fhir",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"resourceType\":\"Parameters\",\r\n\t\"meta\":\r\n\t{\r\n\t\t\"profile\":\r\n\t\t[\r\n\t\t\t\"http://fhir.nhs.net/OperationDefinition/gpconnect-carerecord-operation-1\"\r\n\t\t]\r\n\t},\r\n\t\"parameter\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"name\":\"patientNHSNumber\",\r\n\t\t\t\"valueIdentifier\":\r\n\t\t\t{\r\n\t\t\t\t\"system\":\"http://fhir.nhs.net/Id/nhs-number\",\r\n\t\t\t\t\"value\":\"6656336566\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\":\"recordSection\",\r\n\t\t\t\"valueCodeableConcept\":\r\n\t\t\t{\r\n\t\t\t\t\"coding\":\r\n\t\t\t\t[\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"system\":\"http://fhir.nhs.net/ValueSet/gpconnect-record-section-1\",\r\n\t\t\t\t\t\t\"code\":\"ENC\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/DSTU2/1/Patient/$gpc.getcarerecord",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"DSTU2",
+						"1",
+						"Patient",
+						"$gpc.getcarerecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patient Record - Structured",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0e1fb166-1dab-4b6d-94a5-8dfcb97ff820",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoib3JnYW5pemF0aW9uLyoucmVhZCIsInJlcXVlc3RpbmdfZGV2aWNlIjp7InJlc291cmNlVHlwZSI6IkRldmljZSIsImlkIjoiMSIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwOi8vZmhpci5uaHMubmV0L1N0cnVjdHVyZURlZmluaXRpb24vZ3Bjb25uZWN0LWRldmljZS0xIl0sInZlcnNpb25JZCI6IjEifSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiVFBQIiwidmFsdWUiOiJUUFAifV0sInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjQ2MjI0MDAwMCIsImRpc3BsYXkiOiJQYXRpZW50IGhlYWx0aCByZWNvcmQgaW5mb3JtYXRpb24gc3lzdGVtIChwaHlzaWNhbCBvYmplY3QpIn1dfX0sInJlcXVlc3Rpbmdfb3JnYW5pemF0aW9uIjp7InJlc291cmNlVHlwZSI6Ik9yZ2FuaXphdGlvbiIsImlkIjoiYTdkMDAwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtT3JnYW5pemF0aW9uLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvb2RzLW9yZ2FuaXphdGlvbi1jb2RlIiwidmFsdWUiOiJNODU3OTcifV0sIm5hbWUiOiJIb2NrbGV5IE1lZGljYWwgUHJhY3RpY2UiLCJhZGRyZXNzIjpbeyJsaW5lIjpbIkhvY2tsZXkgTWVkaWNhbCBQcmFjdGljZSIsIjYwIEEiLCJCIl0sImNpdHkiOiJDIiwiZGlzdHJpY3QiOiJBdXN0cmFsaWEiLCJwb3N0YWxDb2RlIjoiWlo5OSA2R1oiLCJjb3VudHJ5IjoiQXVzdHJhbGlhIn1dLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInVzZSI6IndvcmsiLCJ2YWx1ZSI6IjAxMjEgNTU0MTc1NyJ9XSwiYWN0aXZlIjp0cnVlLCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0dQQ29ubmVjdC1PcmdhbmlzYXRpb25UeXBlLTEiLCJjb2RlIjoiZ3AtcHJhY3RpY2UiLCJkaXNwbGF5IjoiZ3AtcHJhY3RpY2UifV19XSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU1haW5Mb2NhdGlvbi0xIiwidmFsdWVSZWZlcmVuY2UiOnsicmVmZXJlbmNlIjoiTG9jYXRpb24vYTdkMDAwMDAwMDAwMDAwMF8wMTAwMDAwMDAwMDAwMDAwIn19XX0sInJlcXVlc3RpbmdfcHJhY3RpdGlvbmVyIjp7InJlc291cmNlVHlwZSI6IlByYWN0aXRpb25lciIsImlkIjoiMTcyODEwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtUHJhY3RpdGlvbmVyLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvc2RzLXVzZXItaWQiLCJ2YWx1ZSI6IjE0MjE0MjE0MjE0MiJ9XSwibmFtZSI6W3sicHJlZml4IjpbIk1yIl0sImdpdmVuIjpbIkJvYiJdLCJmYW1pbHkiOiJXaWxzb24iLCJ1c2UiOiJvZmZpY2lhbCJ9XSwiZ2VuZGVyIjoibWFsZSIsImFjdGl2ZSI6dHJ1ZSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJhcyIsImRpc3BsYXkiOiJBc3NhbWVzZSJ9XX19XX0seyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJiaCIsImRpc3BsYXkiOiJCaWhhcmkgbGFuZ3VhZ2VzIn1dfX1dfV19fQ.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A84018",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:operation:gpc.getstructuredrecord-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " 5B6FC4C0-1A78-11E9-9AC4-",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"meta\":\r\n\t{\r\n\t\t\"profile\":\r\n\t\t[\r\n\t\t\t\"https://fhir.nhs.uk/STU3/OperationDefinition/GPConnect-GetStructuredRecord-Operation-1\"\r\n\t\t]\r\n\t},\r\n\t\"resourceType\":\"Parameters\",\r\n\t\"parameter\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"name\":\"patientNHSNumber\",\r\n\t\t\t\"valueIdentifier\":\r\n\t\t\t{\r\n\t\t\t\t\"system\":\"https://fhir.nhs.uk/Id/nhs-number\",\r\n\t\t\t\t\"value\":\"6656336566\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\":\"includeAllergies\",\r\n\t\t\t\"part\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"name\":\"includeResolvedAllergies\",\r\n\t\t\t\t\t\"valueBoolean\":true\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\":\"includeMedication\",\r\n\t\t\t\"part\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"name\":\"includePrescriptionIssues\",\r\n\t\t\t\t\t\"valueBoolean\":true\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t\"name\":\"medicationSearchFromDate\",\r\n\t\t\t\t\t\"valueDate\":\"2017-06-04\"\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Patient/$gpc.getstructuredrecord",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Patient",
+						"$gpc.getstructuredrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments - Find free slot",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoib3JnYW5pemF0aW9uLyoucmVhZCIsInJlcXVlc3RpbmdfZGV2aWNlIjp7InJlc291cmNlVHlwZSI6IkRldmljZSIsImlkIjoiMSIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwOi8vZmhpci5uaHMubmV0L1N0cnVjdHVyZURlZmluaXRpb24vZ3Bjb25uZWN0LWRldmljZS0xIl0sInZlcnNpb25JZCI6IjEifSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiVFBQIiwidmFsdWUiOiJUUFAifV0sInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjQ2MjI0MDAwMCIsImRpc3BsYXkiOiJQYXRpZW50IGhlYWx0aCByZWNvcmQgaW5mb3JtYXRpb24gc3lzdGVtIChwaHlzaWNhbCBvYmplY3QpIn1dfX0sInJlcXVlc3Rpbmdfb3JnYW5pemF0aW9uIjp7InJlc291cmNlVHlwZSI6Ik9yZ2FuaXphdGlvbiIsImlkIjoiYTdkMDAwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtT3JnYW5pemF0aW9uLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvb2RzLW9yZ2FuaXphdGlvbi1jb2RlIiwidmFsdWUiOiJNODU3OTcifV0sIm5hbWUiOiJIb2NrbGV5IE1lZGljYWwgUHJhY3RpY2UiLCJhZGRyZXNzIjpbeyJsaW5lIjpbIkhvY2tsZXkgTWVkaWNhbCBQcmFjdGljZSIsIjYwIEEiLCJCIl0sImNpdHkiOiJDIiwiZGlzdHJpY3QiOiJBdXN0cmFsaWEiLCJwb3N0YWxDb2RlIjoiWlo5OSA2R1oiLCJjb3VudHJ5IjoiQXVzdHJhbGlhIn1dLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInVzZSI6IndvcmsiLCJ2YWx1ZSI6IjAxMjEgNTU0MTc1NyJ9XSwiYWN0aXZlIjp0cnVlLCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0dQQ29ubmVjdC1PcmdhbmlzYXRpb25UeXBlLTEiLCJjb2RlIjoiZ3AtcHJhY3RpY2UiLCJkaXNwbGF5IjoiZ3AtcHJhY3RpY2UifV19XSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU1haW5Mb2NhdGlvbi0xIiwidmFsdWVSZWZlcmVuY2UiOnsicmVmZXJlbmNlIjoiTG9jYXRpb24vYTdkMDAwMDAwMDAwMDAwMF8wMTAwMDAwMDAwMDAwMDAwIn19XX0sInJlcXVlc3RpbmdfcHJhY3RpdGlvbmVyIjp7InJlc291cmNlVHlwZSI6IlByYWN0aXRpb25lciIsImlkIjoiMTcyODEwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtUHJhY3RpdGlvbmVyLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvc2RzLXVzZXItaWQiLCJ2YWx1ZSI6IjE0MjE0MjE0MjE0MiJ9XSwibmFtZSI6W3sicHJlZml4IjpbIk1yIl0sImdpdmVuIjpbIkJvYiJdLCJmYW1pbHkiOiJXaWxzb24iLCJ1c2UiOiJvZmZpY2lhbCJ9XSwiZ2VuZGVyIjoibWFsZSIsImFjdGl2ZSI6dHJ1ZSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJhcyIsImRpc3BsYXkiOiJBc3NhbWVzZSJ9XX19XX0seyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJiaCIsImRpc3BsYXkiOiJCaWhhcmkgbGFuZ3VhZ2VzIn1dfX1dfV19fQ.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A84018",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:rest:search:slot-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " 6135F6E0-1AFF-11E9-B2D8-79A0031908E1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Slot?start=ge2019-01-19T00:00:00Z&end=le2019-02-01T00:00:00Z&status=free&_include=Slot:schedule&_include:recurse=Schedule:actor:Practitioner&_include:recurse=Schedule:actor:Location",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Slot"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "ge2019-01-19T00:00:00Z"
+						},
+						{
+							"key": "end",
+							"value": "le2019-02-01T00:00:00Z"
+						},
+						{
+							"key": "status",
+							"value": "free"
+						},
+						{
+							"key": "_include",
+							"value": "Slot:schedule"
+						},
+						{
+							"key": "_include:recurse",
+							"value": "Schedule:actor:Practitioner"
+						},
+						{
+							"key": "_include:recurse",
+							"value": "Schedule:actor:Location"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments - Book appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoicGF0aWVudC8qLndyaXRlIiwicmVxdWVzdGluZ19kZXZpY2UiOnsicmVzb3VyY2VUeXBlIjoiRGV2aWNlIiwiaWQiOiIxIiwibWV0YSI6eyJwcm9maWxlIjpbImh0dHA6Ly9maGlyLm5ocy5uZXQvU3RydWN0dXJlRGVmaW5pdGlvbi9ncGNvbm5lY3QtZGV2aWNlLTEiXSwidmVyc2lvbklkIjoiMSJ9LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJUUFAiLCJ2YWx1ZSI6IlRQUCJ9XSwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNDYyMjQwMDAwIiwiZGlzcGxheSI6IlBhdGllbnQgaGVhbHRoIHJlY29yZCBpbmZvcm1hdGlvbiBzeXN0ZW0gKHBoeXNpY2FsIG9iamVjdCkifV19fSwicmVxdWVzdGluZ19vcmdhbml6YXRpb24iOnsicmVzb3VyY2VUeXBlIjoiT3JnYW5pemF0aW9uIiwiaWQiOiIzNGQwMDAwMDAwMDAwMDAwIiwibWV0YSI6eyJwcm9maWxlIjpbImh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0NhcmVDb25uZWN0LUdQQy1Pcmdhbml6YXRpb24tMSJdfSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9JZC9vZHMtb3JnYW5pemF0aW9uLWNvZGUiLCJ2YWx1ZSI6Ik04NTAxNSJ9XSwibmFtZSI6IlNwYXJraGlsbCBTdXJnZXJ5IiwiYWRkcmVzcyI6W3sibGluZSI6WyI1NzggU3RyYXRmb3JkIFJvYWQiLCJTcGFya2hpbGwiXSwiY2l0eSI6IkJpcm1pbmdoYW0iLCJkaXN0cmljdCI6Ildlc3QgTWlkbGFuZHMiLCJwb3N0YWxDb2RlIjoiQjExIDRBTiJ9XSwidGVsZWNvbSI6W3sic3lzdGVtIjoicGhvbmUiLCJ1c2UiOiJ3b3JrIiwidmFsdWUiOiIwMzQ1IDI0NTA3NjUifV0sImFjdGl2ZSI6dHJ1ZSwidHlwZSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9HUENvbm5lY3QtT3JnYW5pc2F0aW9uVHlwZS0xIiwiY29kZSI6ImdwLXByYWN0aWNlIiwiZGlzcGxheSI6ImdwLXByYWN0aWNlIn1dfV0sImV4dGVuc2lvbiI6W3sidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1NYWluTG9jYXRpb24tMSIsInZhbHVlUmVmZXJlbmNlIjp7InJlZmVyZW5jZSI6IkxvY2F0aW9uLzM0ZDAwMDAwMDAwMDAwMDBfMDEwMDAwMDAwMDAwMDAwMCJ9fV19LCJyZXF1ZXN0aW5nX3ByYWN0aXRpb25lciI6eyJyZXNvdXJjZVR5cGUiOiJQcmFjdGl0aW9uZXIiLCJpZCI6IjE3MjgxMDAwMDAwMDAwMDAiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vQ2FyZUNvbm5lY3QtR1BDLVByYWN0aXRpb25lci0xIl19LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL0lkL3Nkcy11c2VyLWlkIiwidmFsdWUiOiIxNDIxNDIxNDIxNDIifV0sIm5hbWUiOlt7InByZWZpeCI6WyJNciJdLCJnaXZlbiI6WyJCb2IiXSwiZmFtaWx5IjoiV2lsc29uIiwidXNlIjoib2ZmaWNpYWwifV0sImdlbmRlciI6Im1hbGUiLCJhY3RpdmUiOnRydWUsImV4dGVuc2lvbiI6W3sidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1OSFNDb21tdW5pY2F0aW9uLTEiLCJleHRlbnNpb24iOlt7InVybCI6Imxhbmd1YWdlIiwidmFsdWVDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9DYXJlQ29ubmVjdC1IdW1hbkxhbmd1YWdlLTEiLCJjb2RlIjoiYXMiLCJkaXNwbGF5IjoiQXNzYW1lc2UifV19fV19LHsidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1OSFNDb21tdW5pY2F0aW9uLTEiLCJleHRlbnNpb24iOlt7InVybCI6Imxhbmd1YWdlIiwidmFsdWVDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9DYXJlQ29ubmVjdC1IdW1hbkxhbmd1YWdlLTEiLCJjb2RlIjoiYmgiLCJkaXNwbGF5IjoiQmloYXJpIGxhbmd1YWdlcyJ9XX19XX1dfX0.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A84018",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:rest:create:appointment-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " 0195CBB0-1A79-11E9-9F18-E3EE4D622E62",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"resourceType\":\"Appointment\",\r\n\t\"meta\":\r\n\t{\r\n\t\t\"profile\":\r\n\t\t[\r\n\t\t\t\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Appointment-1\"\r\n\t\t]\r\n\t},\r\n\t\"contained\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"resourceType\":\"Organization\",\r\n\t\t\t\"id\":\"bd00000000000000\",\r\n\t\t\t\"meta\":\r\n\t\t\t{\r\n\t\t\t\t\"profile\":\r\n\t\t\t\t[\r\n\t\t\t\t\t\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Organization-1\"\r\n\t\t\t\t]\r\n\t\t\t},\r\n\t\t\t\"identifier\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"system\":\"https://fhir.nhs.uk/Id/ods-organization-code\",\r\n\t\t\t\t\t\"value\":\"Z12345\"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"name\":\"Broad Walk Medical Practice\",\r\n\t\t\t\"address\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"line\":\r\n\t\t\t\t\t[\r\n\t\t\t\t\t\t\"1 Oakworth Road\"\r\n\t\t\t\t\t],\r\n\t\t\t\t\t\"city\":\"Keighley\",\r\n\t\t\t\t\t\"district\":\"West Yorkshire\",\r\n\t\t\t\t\t\"postalCode\":\"BD21 1SA\"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"telecom\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"system\":\"phone\",\r\n\t\t\t\t\t\"use\":\"work\",\r\n\t\t\t\t\t\"value\":\"0113 2050080\"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"active\":true,\r\n\t\t\t\"type\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"coding\":\r\n\t\t\t\t\t[\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\"system\":\"https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-OrganisationType-1\",\r\n\t\t\t\t\t\t\t\"code\":\"gp-practice\",\r\n\t\t\t\t\t\t\t\"display\":\"gp-practice\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"extension\":\r\n\t\t\t[\r\n\t\t\t\t{\r\n\t\t\t\t\t\"url\":\"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-GPC-MainLocation-1\",\r\n\t\t\t\t\t\"valueReference\":\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"reference\":\"Location/bd00000000000000_0100000000000000\"\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"description\":\"Test Appointment\",\r\n\t\"status\":\"booked\",\r\n\t\"created\":\"2019-01-18T11:48:00Z\",\r\n\t\"participant\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"actor\":\r\n\t\t\t{\r\n\t\t\t\t\"reference\":\"Patient/9222500000000000\"\r\n\t\t\t},\r\n\t\t\t\"status\":\"accepted\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"actor\":\r\n\t\t\t{\r\n\t\t\t\t\"reference\":\"Location/bd00000000000000_0100000000000000\",\r\n\t\t\t\t\"display\":\"Broad Walk Medical Practice\"\r\n\t\t\t},\r\n\t\t\t\"status\":\"accepted\"\r\n\t\t}\r\n\t],\r\n\t\"slot\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"reference\":\"Slot/1548068400000_16f5330000000000\"\r\n\t\t}\r\n\t],\r\n\t\"start\":\"2019-01-21T11:00:00Z\",\r\n\t\"end\":\"2019-01-21T11:10:00Z\",\r\n\t\"comment\":\" - Booked via GP Connect.\",\r\n\t\"extension\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"url\":\"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-BookingOrganisation-1\",\r\n\t\t\t\"valueReference\":\r\n\t\t\t{\r\n\t\t\t\t\"reference\":\"#bd00000000000000\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Appointment",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments - Cancel appointment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoicGF0aWVudC8qLndyaXRlIiwicmVxdWVzdGluZ19kZXZpY2UiOnsicmVzb3VyY2VUeXBlIjoiRGV2aWNlIiwiaWQiOiIxIiwibWV0YSI6eyJwcm9maWxlIjpbImh0dHA6Ly9maGlyLm5ocy5uZXQvU3RydWN0dXJlRGVmaW5pdGlvbi9ncGNvbm5lY3QtZGV2aWNlLTEiXSwidmVyc2lvbklkIjoiMSJ9LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJUUFAiLCJ2YWx1ZSI6IlRQUCJ9XSwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNDYyMjQwMDAwIiwiZGlzcGxheSI6IlBhdGllbnQgaGVhbHRoIHJlY29yZCBpbmZvcm1hdGlvbiBzeXN0ZW0gKHBoeXNpY2FsIG9iamVjdCkifV19fSwicmVxdWVzdGluZ19vcmdhbml6YXRpb24iOnsicmVzb3VyY2VUeXBlIjoiT3JnYW5pemF0aW9uIiwiaWQiOiIzNGQwMDAwMDAwMDAwMDAwIiwibWV0YSI6eyJwcm9maWxlIjpbImh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0NhcmVDb25uZWN0LUdQQy1Pcmdhbml6YXRpb24tMSJdfSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9JZC9vZHMtb3JnYW5pemF0aW9uLWNvZGUiLCJ2YWx1ZSI6Ik04NTAxNSJ9XSwibmFtZSI6IlNwYXJraGlsbCBTdXJnZXJ5IiwiYWRkcmVzcyI6W3sibGluZSI6WyI1NzggU3RyYXRmb3JkIFJvYWQiLCJTcGFya2hpbGwiXSwiY2l0eSI6IkJpcm1pbmdoYW0iLCJkaXN0cmljdCI6Ildlc3QgTWlkbGFuZHMiLCJwb3N0YWxDb2RlIjoiQjExIDRBTiJ9XSwidGVsZWNvbSI6W3sic3lzdGVtIjoicGhvbmUiLCJ1c2UiOiJ3b3JrIiwidmFsdWUiOiIwMzQ1IDI0NTA3NjUifV0sImFjdGl2ZSI6dHJ1ZSwidHlwZSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9HUENvbm5lY3QtT3JnYW5pc2F0aW9uVHlwZS0xIiwiY29kZSI6ImdwLXByYWN0aWNlIiwiZGlzcGxheSI6ImdwLXByYWN0aWNlIn1dfV0sImV4dGVuc2lvbiI6W3sidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1NYWluTG9jYXRpb24tMSIsInZhbHVlUmVmZXJlbmNlIjp7InJlZmVyZW5jZSI6IkxvY2F0aW9uLzM0ZDAwMDAwMDAwMDAwMDBfMDEwMDAwMDAwMDAwMDAwMCJ9fV19LCJyZXF1ZXN0aW5nX3ByYWN0aXRpb25lciI6eyJyZXNvdXJjZVR5cGUiOiJQcmFjdGl0aW9uZXIiLCJpZCI6IjE3MjgxMDAwMDAwMDAwMDAiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vQ2FyZUNvbm5lY3QtR1BDLVByYWN0aXRpb25lci0xIl19LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL0lkL3Nkcy11c2VyLWlkIiwidmFsdWUiOiIxNDIxNDIxNDIxNDIifV0sIm5hbWUiOlt7InByZWZpeCI6WyJNciJdLCJnaXZlbiI6WyJCb2IiXSwiZmFtaWx5IjoiV2lsc29uIiwidXNlIjoib2ZmaWNpYWwifV0sImdlbmRlciI6Im1hbGUiLCJhY3RpdmUiOnRydWUsImV4dGVuc2lvbiI6W3sidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1OSFNDb21tdW5pY2F0aW9uLTEiLCJleHRlbnNpb24iOlt7InVybCI6Imxhbmd1YWdlIiwidmFsdWVDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9DYXJlQ29ubmVjdC1IdW1hbkxhbmd1YWdlLTEiLCJjb2RlIjoiYXMiLCJkaXNwbGF5IjoiQXNzYW1lc2UifV19fV19LHsidXJsIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vRXh0ZW5zaW9uLUNhcmVDb25uZWN0LUdQQy1OSFNDb21tdW5pY2F0aW9uLTEiLCJleHRlbnNpb24iOlt7InVybCI6Imxhbmd1YWdlIiwidmFsdWVDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvQ29kZVN5c3RlbS9DYXJlQ29ubmVjdC1IdW1hbkxhbmd1YWdlLTEiLCJjb2RlIjoiYmgiLCJkaXNwbGF5IjoiQmloYXJpIGxhbmd1YWdlcyJ9XX19XX1dfX0.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A84018",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:rest:cancel:appointment-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " CAC38F90-18B2-11E9-947B-5133172CBFD8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n                \"resourceType\": \"Appointment\",\n                \"id\": \"175ebd1000000000\",\n                \"meta\": {\n                    \"profile\": [\n                        \"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Appointment-1\"\n                    ],\n                    \"versionId\": \"95291E54D1DB0C1FA055DD9BCFC08B44\",\n                    \"lastUpdated\": \"2019-01-18T22:29:20Z\"\n                },\n                \"contained\": [\n                    {\n                        \"resourceType\": \"Organization\",\n                        \"id\": \"bd00000000000000\",\n                        \"meta\": {\n                            \"profile\": [\n                                \"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Organization-1\"\n                            ]\n                        },\n                        \"identifier\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\n                                \"value\": \"Z12345\"\n                            }\n                        ],\n                        \"name\": \"Broad Walk Medical Practice\",\n                        \"address\": [\n                            {\n                                \"line\": [\n                                    \"1 Oakworth Road\"\n                                ],\n                                \"city\": \"Keighley\",\n                                \"district\": \"West Yorkshire\",\n                                \"postalCode\": \"BD21 1SA\"\n                            }\n                        ],\n                        \"telecom\": [\n                            {\n                                \"system\": \"phone\",\n                                \"use\": \"work\",\n                                \"value\": \"0113 2050080\"\n                            }\n                        ],\n                        \"active\": true,\n                        \"type\": [\n                            {\n                                \"coding\": [\n                                    {\n                                        \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-OrganisationType-1\",\n                                        \"code\": \"gp-practice\",\n                                        \"display\": \"gp-practice\"\n                                    }\n                                ]\n                            }\n                        ],\n                        \"extension\": [\n                            {\n                                \"url\": \"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-GPC-MainLocation-1\",\n                                \"valueReference\": {\n                                    \"reference\": \"Location/bd00000000000000_0100000000000000\"\n                                }\n                            }\n                        ]\n                    }\n                ],\n                \"description\": \"Test Appointment\\n - Booked via GP Connect.\",\n                \"status\": \"cancelled\",\n                \"created\": \"2019-01-18T22:29:20Z\",\n                \"participant\": [\n                    {\n                        \"actor\": {\n                            \"reference\": \"Patient/9222500000000000\"\n                        },\n                        \"status\": \"accepted\"\n                    },\n                    {\n                        \"actor\": {\n                            \"reference\": \"Practitioner/d681700000000000\",\n                            \"display\": \"Mr Mark Keith\"\n                        },\n                        \"status\": \"accepted\"\n                    },\n                    {\n                        \"actor\": {\n                            \"reference\": \"Location/bd00000000000000_0100000000000000\",\n                            \"display\": \"Broad Walk Medical Practice\"\n                        },\n                        \"status\": \"accepted\"\n                    }\n                ],\n                \"slot\": [\n                    {\n                        \"reference\": \"Slot/1548068400000_16f5330000000000\"\n                    }\n                ],\n                \"start\": \"2019-01-21T11:00:00Z\",\n                \"end\": \"2019-01-21T11:10:00Z\",\n                \"minutesDuration\": 10,\n                \"extension\": [\n                \t{\n\t\t\t\t\t\t\"url\":\"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-AppointmentCancellationReason-1\",\n\t\t\t\t\t\t\"valueString\":\"No longer required\"\n\t\t\t\t\t},\n                    {\n                        \"url\": \"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-BookingOrganisation-1\",\n                        \"valueReference\": {\n                            \"reference\": \"#bd00000000000000\"\n                        }\n                    },\n                    {\n                        \"url\": \"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-2\",\n                        \"valueCode\": \"In-person\"\n                    },\n                    {\n                        \"url\": \"https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-PractitionerRole-1\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                                    \"code\": \"S0010:G0020:R0260\",\n                                    \"display\": \"General Medical Practitioner\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            }"
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Appointment/175ebd1000000000",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Appointment",
+						"175ebd1000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments - View for patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoib3JnYW5pemF0aW9uLyoucmVhZCIsInJlcXVlc3RpbmdfZGV2aWNlIjp7InJlc291cmNlVHlwZSI6IkRldmljZSIsImlkIjoiMSIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwOi8vZmhpci5uaHMubmV0L1N0cnVjdHVyZURlZmluaXRpb24vZ3Bjb25uZWN0LWRldmljZS0xIl0sInZlcnNpb25JZCI6IjEifSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiVFBQIiwidmFsdWUiOiJUUFAifV0sInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjQ2MjI0MDAwMCIsImRpc3BsYXkiOiJQYXRpZW50IGhlYWx0aCByZWNvcmQgaW5mb3JtYXRpb24gc3lzdGVtIChwaHlzaWNhbCBvYmplY3QpIn1dfX0sInJlcXVlc3Rpbmdfb3JnYW5pemF0aW9uIjp7InJlc291cmNlVHlwZSI6Ik9yZ2FuaXphdGlvbiIsImlkIjoiMzRkMDAwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtT3JnYW5pemF0aW9uLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvb2RzLW9yZ2FuaXphdGlvbi1jb2RlIiwidmFsdWUiOiJNODUwMTUifV0sIm5hbWUiOiJTcGFya2hpbGwgU3VyZ2VyeSIsImFkZHJlc3MiOlt7ImxpbmUiOlsiNTc4IFN0cmF0Zm9yZCBSb2FkIiwiU3BhcmtoaWxsIl0sImNpdHkiOiJCaXJtaW5naGFtIiwiZGlzdHJpY3QiOiJXZXN0IE1pZGxhbmRzIiwicG9zdGFsQ29kZSI6IkIxMSA0QU4ifV0sInRlbGVjb20iOlt7InN5c3RlbSI6InBob25lIiwidXNlIjoid29yayIsInZhbHVlIjoiMDM0NSAyNDUwNzY1In1dLCJhY3RpdmUiOnRydWUsInR5cGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL0NvZGVTeXN0ZW0vR1BDb25uZWN0LU9yZ2FuaXNhdGlvblR5cGUtMSIsImNvZGUiOiJncC1wcmFjdGljZSIsImRpc3BsYXkiOiJncC1wcmFjdGljZSJ9XX1dLCJleHRlbnNpb24iOlt7InVybCI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0V4dGVuc2lvbi1DYXJlQ29ubmVjdC1HUEMtTWFpbkxvY2F0aW9uLTEiLCJ2YWx1ZVJlZmVyZW5jZSI6eyJyZWZlcmVuY2UiOiJMb2NhdGlvbi8zNGQwMDAwMDAwMDAwMDAwXzAxMDAwMDAwMDAwMDAwMDAifX1dfSwicmVxdWVzdGluZ19wcmFjdGl0aW9uZXIiOnsicmVzb3VyY2VUeXBlIjoiUHJhY3RpdGlvbmVyIiwiaWQiOiIxNzI4MTAwMDAwMDAwMDAwIiwibWV0YSI6eyJwcm9maWxlIjpbImh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0NhcmVDb25uZWN0LUdQQy1QcmFjdGl0aW9uZXItMSJdfSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9JZC9zZHMtdXNlci1pZCIsInZhbHVlIjoiMTQyMTQyMTQyMTQyIn1dLCJuYW1lIjpbeyJwcmVmaXgiOlsiTXIiXSwiZ2l2ZW4iOlsiQm9iIl0sImZhbWlseSI6IldpbHNvbiIsInVzZSI6Im9mZmljaWFsIn1dLCJnZW5kZXIiOiJtYWxlIiwiYWN0aXZlIjp0cnVlLCJleHRlbnNpb24iOlt7InVybCI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0V4dGVuc2lvbi1DYXJlQ29ubmVjdC1HUEMtTkhTQ29tbXVuaWNhdGlvbi0xIiwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJsYW5ndWFnZSIsInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL0NvZGVTeXN0ZW0vQ2FyZUNvbm5lY3QtSHVtYW5MYW5ndWFnZS0xIiwiY29kZSI6ImFzIiwiZGlzcGxheSI6IkFzc2FtZXNlIn1dfX1dfSx7InVybCI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9TdHJ1Y3R1cmVEZWZpbml0aW9uL0V4dGVuc2lvbi1DYXJlQ29ubmVjdC1HUEMtTkhTQ29tbXVuaWNhdGlvbi0xIiwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJsYW5ndWFnZSIsInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL0NvZGVTeXN0ZW0vQ2FyZUNvbm5lY3QtSHVtYW5MYW5ndWFnZS0xIiwiY29kZSI6ImJoIiwiZGlzcGxheSI6IkJpaGFyaSBsYW5ndWFnZXMifV19fV19XX19.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A84018",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:rest:search:patient_appointments-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " 34EA8DB0-1A7A-11E9-9F18-E3EE4D622E62",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Patient/9222500000000000/Appointment?start=ge2019-01-18&start=le2019-01-24",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Patient",
+						"9222500000000000",
+						"Appointment"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "ge2019-01-18"
+						},
+						{
+							"key": "start",
+							"value": "le2019-01-24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Foundations - Find Patient By NHS Number",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": " Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL3d3dy50cHAtdWsuY29tIiwic3ViIjoiMTcyODEwMDAwMDAwMDAwMCIsImF1ZCI6Imh0dHBzOi8vYXV0aG9yaXplLmZoaXIubmhzLm5ldC90b2tlbiIsImV4cCI6MTkwMDAwMDMwMCwiaWF0IjoxOTAwMDAwMDAwLCJyZWFzb25fZm9yX3JlcXVlc3QiOiJkaXJlY3RjYXJlIiwicmVxdWVzdGVkX3Njb3BlIjoicGF0aWVudC8qLnJlYWQiLCJyZXF1ZXN0aW5nX2RldmljZSI6eyJyZXNvdXJjZVR5cGUiOiJEZXZpY2UiLCJpZCI6IjEiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cDovL2ZoaXIubmhzLm5ldC9TdHJ1Y3R1cmVEZWZpbml0aW9uL2dwY29ubmVjdC1kZXZpY2UtMSJdLCJ2ZXJzaW9uSWQiOiIxIn0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6IlRQUCIsInZhbHVlIjoiVFBQIn1dLCJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI0NjIyNDAwMDAiLCJkaXNwbGF5IjoiUGF0aWVudCBoZWFsdGggcmVjb3JkIGluZm9ybWF0aW9uIHN5c3RlbSAocGh5c2ljYWwgb2JqZWN0KSJ9XX19LCJyZXF1ZXN0aW5nX29yZ2FuaXphdGlvbiI6eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6IjM0ZDAwMDAwMDAwMDAwMDAiLCJtZXRhIjp7InByb2ZpbGUiOlsiaHR0cHM6Ly9maGlyLm5ocy51ay9TVFUzL1N0cnVjdHVyZURlZmluaXRpb24vQ2FyZUNvbm5lY3QtR1BDLU9yZ2FuaXphdGlvbi0xIl19LCJpZGVudGlmaWVyIjpbeyJzeXN0ZW0iOiJodHRwczovL2ZoaXIubmhzLnVrL0lkL29kcy1vcmdhbml6YXRpb24tY29kZSIsInZhbHVlIjoiTTg1MDE1In1dLCJuYW1lIjoiU3BhcmtoaWxsIFN1cmdlcnkiLCJhZGRyZXNzIjpbeyJsaW5lIjpbIjU3OCBTdHJhdGZvcmQgUm9hZCIsIlNwYXJraGlsbCJdLCJjaXR5IjoiQmlybWluZ2hhbSIsImRpc3RyaWN0IjoiV2VzdCBNaWRsYW5kcyIsInBvc3RhbENvZGUiOiJCMTEgNEFOIn1dLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInVzZSI6IndvcmsiLCJ2YWx1ZSI6IjAzNDUgMjQ1MDc2NSJ9XSwiYWN0aXZlIjp0cnVlLCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0dQQ29ubmVjdC1PcmdhbmlzYXRpb25UeXBlLTEiLCJjb2RlIjoiZ3AtcHJhY3RpY2UiLCJkaXNwbGF5IjoiZ3AtcHJhY3RpY2UifV19XSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU1haW5Mb2NhdGlvbi0xIiwidmFsdWVSZWZlcmVuY2UiOnsicmVmZXJlbmNlIjoiTG9jYXRpb24vMzRkMDAwMDAwMDAwMDAwMF8wMTAwMDAwMDAwMDAwMDAwIn19XX0sInJlcXVlc3RpbmdfcHJhY3RpdGlvbmVyIjp7InJlc291cmNlVHlwZSI6IlByYWN0aXRpb25lciIsImlkIjoiMTcyODEwMDAwMDAwMDAwMCIsIm1ldGEiOnsicHJvZmlsZSI6WyJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9DYXJlQ29ubmVjdC1HUEMtUHJhY3RpdGlvbmVyLTEiXX0sImlkZW50aWZpZXIiOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvSWQvc2RzLXVzZXItaWQiLCJ2YWx1ZSI6IjE0MjE0MjE0MjE0MiJ9XSwibmFtZSI6W3sicHJlZml4IjpbIk1yIl0sImdpdmVuIjpbIkJvYiJdLCJmYW1pbHkiOiJXaWxzb24iLCJ1c2UiOiJvZmZpY2lhbCJ9XSwiZ2VuZGVyIjoibWFsZSIsImFjdGl2ZSI6dHJ1ZSwiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJhcyIsImRpc3BsYXkiOiJBc3NhbWVzZSJ9XX19XX0seyJ1cmwiOiJodHRwczovL2ZoaXIubmhzLnVrL1NUVTMvU3RydWN0dXJlRGVmaW5pdGlvbi9FeHRlbnNpb24tQ2FyZUNvbm5lY3QtR1BDLU5IU0NvbW11bmljYXRpb24tMSIsImV4dGVuc2lvbiI6W3sidXJsIjoibGFuZ3VhZ2UiLCJ2YWx1ZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vZmhpci5uaHMudWsvU1RVMy9Db2RlU3lzdGVtL0NhcmVDb25uZWN0LUh1bWFuTGFuZ3VhZ2UtMSIsImNvZGUiOiJiaCIsImRpc3BsYXkiOiJCaWhhcmkgbGFuZ3VhZ2VzIn1dfX1dfV19fQ.",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "accept-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": " application/json+fhir",
+						"type": "text"
+					},
+					{
+						"key": "ssp-from",
+						"value": " A840187",
+						"type": "text"
+					},
+					{
+						"key": "ssp-interactionid",
+						"value": " urn:nhs:names:services:gpconnect:fhir:rest:search:patient-1",
+						"type": "text"
+					},
+					{
+						"key": "ssp-to",
+						"value": " 123456",
+						"type": "text"
+					},
+					{
+						"key": "ssp-traceid",
+						"value": " 6374FB60-1A44-11E9-8274-65C846FEBC09",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://systmoneukdemo1.tpp-uk.com/SystmOneMHS/NHSConnect/Z12345/STU3/1/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|6656336566",
+					"protocol": "https",
+					"host": [
+						"systmoneukdemo1",
+						"tpp-uk",
+						"com"
+					],
+					"path": [
+						"SystmOneMHS",
+						"NHSConnect",
+						"Z12345",
+						"STU3",
+						"1",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "identifier",
+							"value": "https://fhir.nhs.uk/Id/nhs-number|6656336566"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "032da319-1b1e-4d13-a23e-bf030bdb1d76",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "53817f74-4478-40de-be23-4a8f36bb9fba",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d808c9f8-6280-4e4f-94fd-bf4c2369c13d",
+			"key": "HtmlJwt",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

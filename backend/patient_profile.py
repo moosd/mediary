@@ -2,9 +2,6 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-#def hello():
-#    return "Hello World!"
-
 
 def patient_profile():
     import requests
@@ -37,7 +34,7 @@ def patient_profile():
     # get basic patient profile data
 
     data = response.json()
-    return str(data) # returns html file in readable format to webpage
+    return str(data['entry'][0]['resource']['section'][0]['text']['div']) # returns html file in readable format to webpage
 
     namedict = data['entry'][1]['resource']['name'][0]
 
