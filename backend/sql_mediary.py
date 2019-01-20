@@ -1,6 +1,12 @@
 import pyodbc
 import pandas as pd
 
+import os
+from flask import Flask, flash, request, redirect, url_for
+from werkzeug.utils import secure_filename
+
+
+
 
 server = 'mediary.database.windows.net'
 database = 'MeDiary'
@@ -9,6 +15,9 @@ password = 'hackcambridge-1'
 driver= '{ODBC Driver 17 for SQL Server}'
 cnxn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
+
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # cursor.execute("SELECT @@version;")
 # row = cursor.fetchone()
