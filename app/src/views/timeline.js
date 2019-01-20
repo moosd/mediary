@@ -15,43 +15,63 @@ export default class Tl extends Component {
 
 constructor(){
     super()
-    this.data = [
-      {time: '09:00', uri: 'https://cdn.firstcrycdn.com/2018/07/1025188561-H-1024x700.jpg'},
-      {time: '10:45', uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'},
-    ]
-    this.state = {value: this.data.length - 1}
+    this.state = {value: -1, data: []}
+    this.update = this._update.bind(this)
   }
+
+timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  return time;
+}
 
 componentDidMount = async () => {
 
 console.log(this.props.navigation.state.params.id)
 try {
-const photos = await FileSystem.readDirectoryAsync( FileSystem.documentDirectory + 'photos/' + this.props.navigation.state.params.id);
+var photos = await FileSystem.readDirectoryAsync( FileSystem.documentDirectory + 'photos/' + this.props.navigation.state.params.id);
 console.log(photos)
+photos.sort()
+data = []
+
+for(var p of photos) {
+data.push({time: this.timeConverter(parseInt(p.split(".")[0])), uri:  FileSystem.documentDirectory + 'photos/' + this.props.navigation.state.params.id + "/" + p})
+}
+this.setState({value: data.length - 1, data: data})
 
 } catch(err) {
 this.props.navigation.navigate("NewImage", {id: this.props.navigation.state.params.id, refresh: this.update})
 }
 }
 
-update() {
+_update() {
 this.setState({update: 1})
+this.componentDidMount()
 }
 
 render(){
     return(
-<View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
+<View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
-<Text style={{fontSize: 50, textAlign: 'center', marginBottom: 20}}> {this.data[this.state.value]['time']} </Text>
+<Text style={{fontSize: 50, textAlign: 'center', marginBottom: 20}}> {this.state.value > -1 ? this.state.data[this.state.value]['time'] : ''} </Text>
 
 <Image
-          style={{width: 500, height: 400}}
-          source={{uri: this.data[this.state.value]['uri']}}
+          style={{width: 300, height: 300}}
+          source={{uri: this.state.value > -1 ? this.state.data[this.state.value]['uri'] : 'https://i.imgur.com/1PwyP45.jpg'}}
         />
 
+{this.state.value > -1 && this.state.data.length > 1 ?
 <Slider
-    value={this.data.length - 1} step={1} minimumValue={0} maximumValue={this.data.length - 1}
+    value={this.state.data.length - 1} step={1} minimumValue={0} maximumValue={this.state.data.length - 1} style={{ width: 400 }}
     onValueChange={(value) => this.setState({value})} />
+: <View />}
 
 <ActionButton
   buttonColor="rgba(231,76,60,1)"
