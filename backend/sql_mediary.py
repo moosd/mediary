@@ -6,8 +6,6 @@ from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 
 
-
-
 server = 'mediary.database.windows.net'
 database = 'MeDiary'
 username = 'mediary'
