@@ -10,6 +10,7 @@ import {
 import { Slider } from 'react-native-elements'
 
 import { FileSystem, FaceDetector, MediaLibrary, Permissions } from 'expo';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class Tl extends Component {
 
@@ -19,15 +20,26 @@ constructor(){
     this.update = this._update.bind(this)
   }
 
+pad(number, length) {
+   
+    var str = '' + number;
+    while (str.length < length) {
+        str = '0' + str;
+    }
+   
+    return str;
+
+}
+
 timeConverter(UNIX_timestamp){
   var a = new Date(UNIX_timestamp);
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var year = a.getFullYear();
   var month = months[a.getMonth()];
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
+  var date = this.pad(a.getDate(), 2);
+  var hour = this.pad(a.getHours(), 2);
+  var min = this.pad(a.getMinutes(), 2);
+  var sec = this.pad(a.getSeconds(), 2);
   var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
   return time;
 }
@@ -76,6 +88,11 @@ render(){
 <ActionButton
   buttonColor="rgba(231,76,60,1)"
   onPress={() => { this.props.navigation.navigate("NewImage", {id: this.props.navigation.state.params.id, refresh: this.update}) }}
+renderIcon={() => { return (<Icon name="ios-camera" style={{fontSize: 20,
+    height: 22,
+    color: 'white'}} />
+) } }
+
 />
 </View>
     )

@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {
   Text,
-  View,TouchableOpacity, AsyncStorage
+  View,TouchableOpacity, AsyncStorage, Button
 } from 'react-native';
-import Swiper from 'react-native-swiper-animated';
+//import Swiper from 'react-native-swiper-animated';
+
+import Swiper from 'react-native-deck-swiper'
 import ActionButton from 'react-native-action-button';
 
 const styles = {
@@ -11,35 +13,49 @@ const styles = {
     backgroundColor: '#009688',
   },
   slide1: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#3f51b5',
     borderRadius: 20
   },
   slide2: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#673ab7',
     borderRadius: 20
 
   },
   slide3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#e91e63',
     borderRadius: 20
   },
-  text: {
+  /*text: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
+  },*/
+container: {
+    flex: 1,
+    backgroundColor: "#F5FCFF"
   },
+  card: {
+    flex: 1,
+    borderRadius: 4,
+    borderWidth: 2,
+    borderColor: "#E8E8E8",
+    justifyContent: "center",
+    backgroundColor: "white",
+textColor: "white"
+  },
+  text: {
+    textAlign: "center",
+    fontSize: 50,
+    backgroundColor: "transparent"
+  }
 };
 
 export default class Tl extends Component {
+
+
+static navigationOptions = ({ navigation }) => ({
+    headerRight: <Button onPress={() => navigation.navigate('Info')} title={'Medical Record'} />,
+})
 
 constructor(){
 super()
@@ -75,7 +91,7 @@ i++
       .catch(error => console.log('error!'));
 }
 
-render() {
+/*render() {
 return (<View style={{flex: 1}}>
   <Swiper
     style={styles.wrapper}
@@ -98,9 +114,69 @@ return (<View style={{flex: 1}}>
 </View>
 )
   }
+}*/
 
+render() {
+return (
+<View style={styles.container}>
+<Swiper
+          ref={swiper => {
+            this.swiper = swiper
+          }}
+          onSwiped={() => this.onSwiped('general')}
+          onSwipedLeft={() => this.onSwiped('left')}
+          onSwipedRight={() => this.onSwiped('right')}
+          onSwipedTop={() => this.onSwiped('top')}
+          onSwipedBottom={() => this.onSwiped('bottom')}
+          onTapCard={this.swipeLeft}
+          cards={this.state.items}
+          cardIndex={this.state.cardIndex}
+          cardVerticalMargin={80}
+          renderCard={this.renderCard}
+          onSwipedAll={this.onSwipedAllCards}
+          stackSize={3}
+infinite={true}
+          stackSeparation={15}
+          animateOverlayLabelsOpacity
+          animateCardOpacity
+          swipeBackCard
+        >
+          <Button onPress={() => this.swiper.swipeBack()} title='Swipe Back' />
+        </Swiper>
+<ActionButton
+  buttonColor="rgba(231,76,60,1)"
+  onPress={() => { this.props.navigation.navigate("NewCondition", {refresh: this.refresh}) }}
+/>
+</View>
+)
 }
 
+
+
+
+  renderCard = (card, index) => {
+    return (
+<TouchableOpacity activeOpacity={1} key={Math.random()} style={styles.card} onPress={() => { this.props.navigation.navigate("Timeline", {id: card.id}); console.log(card.id) }}>
+        <Text style={styles.text}>{card.title}</Text>
+      </TouchableOpacity>
+    )
+  };
+
+  onSwiped = (type) => {
+    console.log(`on swiped ${type}`)
+  }
+
+  onSwipedAllCards = () => {
+    this.setState({
+      swipedAllCards: true
+    })
+  };
+
+  swipeLeft = () => {
+    this.swiper.swipeLeft()
+  };
+
+}
 
 /*
 <TouchableOpacity>

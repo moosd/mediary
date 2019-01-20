@@ -19,6 +19,7 @@ import Lists from './src/views/list';
 import Timeline from './src/views/timeline';
 import Camera from './src/views/camera';
 import NewCond from './src/views/newcond';
+import Info from './src/views/info';
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -47,6 +48,7 @@ const App = StackNavigator({
   Timeline: {screen: Timeline},
   NewCondition: {screen: NewCond},
   NewImage: {screen: Camera},
+  Info: {screen: Info},
 },
   {
     initialRouteName: "Login",
