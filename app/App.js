@@ -18,6 +18,7 @@ import { AsyncStorage } from "react-native"
 import Lists from './src/views/list';
 import Timeline from './src/views/timeline';
 import Camera from './src/views/camera';
+import NewCond from './src/views/newcond';
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -40,62 +41,11 @@ const CustomDrawerContentComponent = props => (
   </View>
 );
 
-const MainRoot = DrawerNavigator(
-  {
-    Login: {
-      path: '/login',
-      screen: Login,
-    },
-    Profile: {
-      path: '/profile',
-      screen: Profile,
-    },
-    Lists: {
-      path: '/lists',
-      screen: Lists,
-    },
-    Components: {
-      path: '/components',
-      screen: Components,
-    },
-    Ratings: {
-      path: '/ratings',
-      screen: Ratings,
-    },
-    Pricing: {
-      path: '/pricing',
-      screen: Pricing,
-    },
-    Settings: {
-      path: '/settings',
-      screen: Settings,
-    },
-  },
-  {
-    initialRouteName: 'Components',
-    contentOptions: {
-      activeTintColor: '#548ff7',
-      activeBackgroundColor: 'transparent',
-      inactiveTintColor: '#ffffff',
-      inactiveBackgroundColor: 'transparent',
-      labelStyle: {
-        fontSize: 15,
-        marginLeft: 0,
-      },
-    },
-    drawerWidth: SCREEN_WIDTH * 0.8,
-    contentComponent: CustomDrawerContentComponent,
-    drawerOpenRoute: 'DrawerOpen',
-    drawerCloseRoute: 'DrawerClose',
-    drawerToggleRoute: 'DrawerToggle',
-  }
-);
-
 const App = StackNavigator({
   Login: {screen: Login},
   List: {screen: Lists},
   Timeline: {screen: Timeline},
-  NewCondition: {screen: Lists},
+  NewCondition: {screen: NewCond},
   NewImage: {screen: Camera},
 },
   {

@@ -125,10 +125,11 @@ export default class CameraScreen extends React.Component {
   onPictureSaved = async photo => {
     await FileSystem.moveAsync({
       from: photo.uri,
-      to: `${FileSystem.documentDirectory}photos/${this.props.navigation.state.id}/${Date.now()}.jpg`,
+      to: `${FileSystem.documentDirectory}photos/${this.props.navigation.state.params.id}/${Date.now()}.jpg`,
     });
     this.setState({ newPhotos: true });
-this.props.navigation.state.params.refresh()
+    this.props.navigation.state.params.refresh()
+this.props.navigation.goBack()
   }
 
   onBarCodeScanned = code => {
