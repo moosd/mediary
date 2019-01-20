@@ -123,13 +123,35 @@ export default class CameraScreen extends React.Component {
   handleMountError = ({ message }) => console.error(message);
 
   onPictureSaved = async photo => {
+   dn = Date.now()
+   fname = FileSystem.documentDirectory + "photos/" + this.props.navigation.state.params.id + "/" + dn + ".jpg"
     await FileSystem.moveAsync({
       from: photo.uri,
-      to: `${FileSystem.documentDirectory}photos/${this.props.navigation.state.params.id}/${Date.now()}.jpg`,
+      to: fname,
     });
     this.setState({ newPhotos: true });
     this.props.navigation.state.params.refresh()
-this.props.navigation.goBack()
+    this.props.navigation.goBack()
+
+
+let formdata = new FormData();
+
+formdata.append("file", {uri: fname, name: dn + ".jpg", type: 'multipart/form-data'})
+
+fetch("https://9b0b9099.ngrok.io/?id=" + this.props.navigation.state.params.id , {
+  method: 'post',
+  headers: {
+    'Content-Type': 'multipart/form-data',
+  },
+  body: formdata
+  }).then(response => {
+console.log(response)
+    console.log("image uploaded")
+  }).catch(err => {
+    console.log(err)
+  })
+
+
   }
 
   onBarCodeScanned = code => {

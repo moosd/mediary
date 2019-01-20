@@ -15,18 +15,22 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3f51b5',
+    borderRadius: 20
   },
   slide2: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#673ab7',
+    borderRadius: 20
+
   },
   slide3: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e91e63',
+    borderRadius: 20
   },
   text: {
     color: '#fff',
@@ -80,7 +84,6 @@ return (<View style={{flex: 1}}>
     paginationRight={'>'}
     smoothTransition
     loop
-    stack
   >
     {this.state.items.map(item => (
       <TouchableOpacity activeOpacity={0.9} key={Math.random()} style={item.css} onPress={() => { this.props.navigation.navigate("Timeline", {id: item.id}) }}>
