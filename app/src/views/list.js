@@ -54,6 +54,7 @@ AsyncStorage.getItem('conditions')
       .then(json => { if(!json) { json = [] }
 console.log(json)
 var i = 0
+json.reverse()
 for(var a of json) {
 if(i % 3 == 1) {
 a.css = styles.slide1
