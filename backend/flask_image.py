@@ -17,10 +17,13 @@ blob_service = BlockBlobService(account_name=account, account_key=key)
 def upload_file():
     if request.method == 'POST':
     	file = request.files['file']
-    	filename = secure_filename(file.filename)
-    	fileextension = filename.rsplit('.',1)[1]
-        Randomfilename = id_generator()
-        filename = Randomfilename + '.' + fileextension
+        condition_id = request.args.get("id")
+    	# filename = secure_filename(file.filename)
+        filename = file.filename
+        filename = condition_id + '/' + filename
+    	# fileextension = filename.rsplit('.',1)[1]
+        # Randomfilename = id_generator()
+        # filename = Randomfilename + '/' + fileextension
         try:
             blob_service.create_blob_from_stream(container, filename, file)
         except Exception:
@@ -38,7 +41,7 @@ def upload_file():
     <!doctype html>
     <title>Upload new File</title>
     <h1>Upload new File</h1>
-    <form action="" method=post enctype=multipart/form-data>
+    <form action="?id=1" method=post enctype=multipart/form-data>
       <p><input type=file name=file>
          <input type=submit value=Upload>
     </form>
