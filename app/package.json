@@ -1,7 +1,7 @@
 {
-  "name": "react-native-elements-app",
+  "name": "mediary",
   "version": "1.0.0",
-  "description": "Demo app for React Native Elements UI Library",
+  "description": "Medical Chronic conditions evidence tracker",
   "author": "Monte Thakkar",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",

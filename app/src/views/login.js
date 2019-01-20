@@ -88,11 +88,7 @@ export default class LoginScreen2 extends Component {
   }
 
 _storeData = async () => {
-  try {
-    await AsyncStorage.setItem('loggedIn', true);
-  } catch (error) {
-    // Error saving data
-  }
+    AsyncStorage.setItem('loggedIn', "true");
 }
 
   login() {
@@ -119,8 +115,8 @@ _retrieveData = async () => {
     if (value !== null) {
       // We have data!!
       console.log(value);
-if(value) {
-this.props.navigation.navigate('List')
+if(value == "true") {
+//this.props.navigation.navigate('List')
 }
     }
    } catch (error) {
